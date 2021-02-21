@@ -22,9 +22,10 @@ defmodule Issues.TableFormatter do
 
   def widths_of(columns) do
     for column <- columns do
-      column 
-      |> map(&String.length/1) 
+      column
+      |> map(&String.length/1)
       |> max
+    end
   end
 
   def format_for(column_widths) do
